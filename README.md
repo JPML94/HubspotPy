@@ -8,33 +8,27 @@
 
 ## How to run
 
-- Create project directory:
-		'''
-		mkdir HubspotPy
-		'''
+- Create project directory and change directory:
+
+		$ mkdir HubspotPy
+		$ cd HubspotPy
 
 - Create virtual environment:
-		'''
-		virtualenv --python python3 venv
-		'''
+
+		$ virtualenv --python python3 venv
 
 - Activate virtual environment:
-		'''
-		source venv/bin/activate
-		'''
+
+		$ source venv/bin/activate
 
 - Install requirements:
-		'''
-		pip install -r requirements.txt
-		'''
+
+		$ pip install -r requirements.txt
 
 - Run getContacts.py:
-		'''
-		python3 getContacts.py
-		'''
+
+		$ python3 getContacts.py
 
 - Run parseJson.py:
-		'''
-		python3 parseJson.py
-		'''
- 
+
+		$ python3 parseJson.py 
