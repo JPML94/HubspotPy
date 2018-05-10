@@ -6,7 +6,7 @@
 
 - parseJson.py - example parsing for json records
 
-## How to run
+## How to run:
 
 - Create project directory and change directory:
 
