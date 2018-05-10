@@ -1,7 +1,12 @@
-from hubspot3.contacts import ContactsClient
 import json
+import os
 
-API_KEY = '00094d2b-ec56-47a6-a975-8f83a2cef7ef'
+from hubspot3.contacts import ContactsClient
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("HUBSPOT_API_KEY")
 
 client = ContactsClient(api_key=API_KEY)
 params = {'property': 'company'}
