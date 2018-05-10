@@ -1,28 +1,40 @@
-#HubspotPyTC
+# HubspotPyTC
 
-##Scripts:
+## Scripts:
 
-	- getContacts.py - gets all contacts, then for each gets properties specified and writes json file
- 	
-	- parseJson.py - example parsing for json records
+⋅⋅⋅getContacts.py - gets all contacts, then for each gets properties specified and writes json file
 
-##How to run
+⋅⋅⋅parseJson.py - example parsing for json records
 
-	- Create project directory:
-		'''mkdir HubspotPy'''
+## How to run
 
-	- Create virtual environment:
-		'''virtualenv --python python3 venv'''
+⋅⋅⋅Create project directory:
+		'''
+		mkdir HubspotPy
+		'''
 
-	- Activate virtual environment:
-		'''source venv/bin/activate''
+⋅⋅⋅Create virtual environment:
+		'''
+		virtualenv --python python3 venv
+		'''
 
-	- Install requirements:
-		'''pip install -r requirements.txt'''
+⋅⋅⋅Activate virtual environment:
+		'''
+		source venv/bin/activate
+		'''
 
-	- Run getContacts.py:
-		'''python3 getContacts.py'''
+⋅⋅⋅Install requirements:
+		'''
+		pip install -r requirements.txt
+		'''
 
-	- Run parseJson.py:
-		'''python3 parseJson.py'''
+⋅⋅⋅Run getContacts.py:
+		'''
+		python3 getContacts.py
+		'''
+
+⋅⋅⋅Run parseJson.py:
+		'''
+		python3 parseJson.py
+		'''
  
