@@ -1,4 +1,7 @@
 .vscode
 .env
+.idea
+*.pyc
 venv
 data
+__pycache__

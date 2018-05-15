@@ -353,7 +353,7 @@ for i in ids:
     except KeyError:
         new_companies_reached_outHistory = ''
 
-    with open('data/{}.json'.format(i), 'w') as f:
+    with open('data/{}.json'.format(i), 'w') as f: #TODO: Try is not None
         data = {
             "email": {"value": email, "history": emailHistory},
             "firstname": {"value": firstname, "history": firstnameHistory},
