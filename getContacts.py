@@ -9,7 +9,6 @@ load_dotenv()
 API_KEY = os.getenv("HUBSPOT_API_KEY")
 
 client = ContactsClient(api_key=API_KEY)
-params = {'property': 'company'}
 contacts_data = client.get_all()
 
 ids = []
@@ -192,7 +191,7 @@ for i in ids:
         curriculum_detailed_feedbackHistory = ''
     try:
         project_grade = contact_by_id['properties']['project_grade']['value']
-    except KeyError:   
+    except KeyError:
         project_grade = ''
     try:
         project_gradeHistory = contact_by_id['properties']['project_grade']['versions']
@@ -356,45 +355,45 @@ for i in ids:
 
     with open('data/{}.json'.format(i), 'w') as f:
         data = {
-            'email': [email, emailHistory],
-            'firstname': [firstname, firstnameHistory],
-            'lastname': [lastname, lastnameHistory],
-            'lifecycle-stage': [lifecyclestage, lifecyclestageHistory],
-            'website': [website, websiteHistory],
-            'lead-source': [lead_source, lead_sourceHistory],
-            'job-title': [jobtitle, jobtitleHistory],
-            'company_name': [company, companyHistory],
-            'last-activity-date': [notes_last_updated, notes_last_updatedHistory],
-            'created-date': [createdate, createdateHistory],
-            'slack': [slack_handle, slack_handleHistory],
-            'github': [github, githubHistory],
-            'medium': [medium, mediumHistory],
-            'twitter': [twitterhandle, twitterhandleHistory],
-            'linkedin': [linkedin, linkedinHistory],
-            'last-page-seen': [hs_analytics_last_url, hs_analytics_last_urlHistory],
-            'num-forms-submitted': [num_conversion_events, num_conversion_eventsHistory],
-            'num-unique-forms-submitted': [num_unique_conversion_events, num_unique_conversion_eventsHistory],
-            'curriculum-grade': [curriculum_grade, curriculum_gradeHistory],
-            'curriculum-detailed': [curriculum_detailed_feedback, curriculum_detailed_feedbackHistory],
-            'project-grade': [project_grade, project_gradeHistory],
-            'project-detailed': [project_detailed_feedback, project_detailed_feedbackHistory],
-            'cardev-grade': [career_development_grade, career_development_gradeHistory],
-            'cardev-detailed': [career_development_detailed_feedback, career_development_detailed_feedbackHistory],
-            'general-grade': [overall_grade, overall_gradeHistory],
-            'general-detailed': [general_detailed_feedback, general_detailed_feedbackHistory],
-            'good-standing': [good_standing, good_standingHistory],
-            'cohort': [tc_cohort, tc_cohortHistory],
-            'tc-email': [tc_email, tc_emailHistory],
-            'tc-grad-date': [tc_grad_date, tc_grad_dateHistory],
-            'tc-projects': [tc_projects, tc_projectsHistory],
-            'tc-start-date': [tc_start_date, tc_start_dateHistory],
-            'track': [tc_track, tc_trackHistory],
-            'bio': [n140_character_bio, n140_character_bioHistory],
-            'mbti-type': [mbti_types, mbti_typesHistory],
-            'last-registered-event': [hs_eventbrite_lastregisteredevent, hs_eventbrite_lastregisteredeventHistory],
-            'last-registered-event-date': [hs_eventbrite_lastregisteredeventdate, hs_eventbrite_lastregisteredeventdateHistory],
-            'job-search-mentality': [are_you_open_to_new_roles_, are_you_open_to_new_roles_History],
-            'companies-reached': [new_companies_reached_out, new_companies_reached_outHistory]
+            "email": {"value": email, "history": emailHistory},
+            "firstname": {"value": firstname, "history": firstnameHistory},
+            "lastname": {"value": lastname, "history": lastnameHistory},
+            "lifecycle-stage": {"value": lifecyclestage, "history": lifecyclestageHistory},
+            "website": {"value": website, "history": websiteHistory},
+            "lead-source": {"value": lead_source, "history": lead_sourceHistory},
+            "job-title": {"value": jobtitle, "history": jobtitleHistory},
+            "company_name": {"value": company, "history": companyHistory},
+            "last-activity-date": {"value": notes_last_updated, "history": notes_last_updatedHistory},
+            "created-date": {"value": createdate, "history": createdateHistory},
+            "slack": {"value": slack_handle, "history": slack_handleHistory},
+            "github": {"value": github, "history": githubHistory},
+            "medium": {"value": medium, "history": mediumHistory},
+            "twitter": {"value": twitterhandle, "history": twitterhandleHistory},
+            "linkedin": {"value": linkedin, "history": linkedinHistory},
+            "last-page-seen": {"value": hs_analytics_last_url, "history": hs_analytics_last_urlHistory},
+            "num-forms-submitted": {"value": num_conversion_events, "history": num_conversion_eventsHistory},
+            "num-unique-forms-submitted": {"value": num_unique_conversion_events, "history": num_unique_conversion_eventsHistory},
+            "curriculum-grade": {"value": curriculum_grade, "history": curriculum_gradeHistory},
+            "curriculum-detailed": {"value": curriculum_detailed_feedback, "history": curriculum_detailed_feedbackHistory},
+            "project-grade": {"value": project_grade, "history": project_gradeHistory},
+            'project-detailed': {"value": project_detailed_feedback, "history": project_detailed_feedbackHistory},
+            "cardev-grade": {"value": career_development_grade, "history": career_development_gradeHistory},
+            "cardev-detailed": {"value": career_development_detailed_feedback, "history": career_development_detailed_feedbackHistory},
+            "general-grade": {"value": overall_grade, "history": overall_gradeHistory},
+            "general-detailed": {"value": general_detailed_feedback, "history": general_detailed_feedbackHistory},
+            "good-standing": {"value": good_standing, "history": good_standingHistory},
+            "cohort": {"value": tc_cohort, "history": tc_cohortHistory},
+            "tc-email": {"value": tc_email, "history": tc_emailHistory},
+            "tc-grad-date": {"value": tc_grad_date, "history": tc_grad_dateHistory},
+            "tc-projects": {"value": tc_projects, "history": tc_projectsHistory},
+            "tc-start-date": {"value": tc_start_date, "history": tc_start_dateHistory},
+            "track": {"value": tc_track, "history": tc_trackHistory},
+            "bio": {"value": n140_character_bio, "history": n140_character_bioHistory},
+            "mbti-type": {"value": mbti_types, "history": mbti_typesHistory},
+            "last-registered-event": {"value": hs_eventbrite_lastregisteredevent, "history": hs_eventbrite_lastregisteredeventHistory},
+            "last-registered-event-date": {"value": hs_eventbrite_lastregisteredeventdate, "history": hs_eventbrite_lastregisteredeventdateHistory},
+            "job-search-mentality": {"value": are_you_open_to_new_roles_, "history": are_you_open_to_new_roles_History},
+            "companies-reached": {"value": new_companies_reached_out, "history": new_companies_reached_outHistory}
         }
         json_data = json.dumps(data, default=set_default)
         print('data on file for {}'.format(i))
