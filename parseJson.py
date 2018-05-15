@@ -1,11 +1,12 @@
 import json
 import os
+import pprint
 
 for filename in os.listdir('data/'):
     with open('data/{}'.format(filename)) as json_data:
         d = json.load(json_data)
         try:
-            print(d['general-grade'][1][0]['value'])
+            pprint.pprint(d)
         except IndexError:
             print('empty value')
 
