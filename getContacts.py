@@ -1692,6 +1692,464 @@ for i in ids:
         recentConversionDateHistory = contact_by_id['properties']['recent_conversion_date']['versions']
     except KeyError:
         recentConversionDateHistory = None
+    try:
+        carDevWeeklyUpdateAssets = contact_by_id['properties']['cardev_weekly_update_assets']['value']
+    except KeyError:
+        carDevWeeklyUpdateAssets = None,
+    try:
+        carDevWeeklyUpdateAssetsHistory = contact_by_id['properties']['cardev_weekly_update_assets']['versions']
+    except KeyError:
+        carDevWeeklyUpdateAssetsHistory = None
+    try:
+        connectionsToTC = contact_by_id['properties']['connections_to_tradecraft']['value']
+    except KeyError:
+        connectionsToTC = None
+    try:
+        connectionsToTCHistory = contact_by_id['properties']['connections_to_tradecraft']['versions']
+    except KeyError:
+        connectionsToTCHistory = None
+    try:
+        contactWithTCCommunity = contact_by_id['properties']['contact_with_tc_community']['value']
+    except KeyError:
+        contactWithTCCommunity = None
+    try:
+        contactWithTCCommunityHistory = contact_by_id['properties']['contact_with_tc_community']['versions']
+    except KeyError:
+        contactWithTCCommunityHistory = None
+    try:
+        inProjects = contact_by_id['properties']['in_projects']['value']
+    except KeyError:
+        inProjects = None
+    try:
+        inProjectsHistory = contact_by_id['properties']['in_projects']['versions']
+    except KeyError:
+        inProjectsHistory = None
+    try:
+        newsletterRoleApproval = contact_by_id['properties']['newsletter_alumni_permission']['value']
+    except KeyError:
+        newsletterRoleApproval = None
+    try:
+        newsletterRoleApprovalHistory = contact_by_id['properties']['newsletter_alumni_permission']['versions']
+    except KeyError:
+        newsletterRoleApprovalHistory = None
+    try:
+        valueForMentor = contact_by_id['properties']['value_for_mentor']['value']
+    except KeyError:
+        valueForMentor = None
+    try:
+        valueForMentorHistory = contact_by_id['properties']['value_for_mentor']['versions']
+    except KeyError:
+        valueForMentorHistory = None
+    try:
+        mentorNoExaplanation = contact_by_id['properties']['explanation_for_bringing_mentor']['value']
+    except KeyError:
+        mentorNoExaplanation = None
+    try:
+        mentorNoExaplanationHistory = contact_by_id['properties']['explanation_for_bringing_mentor']['versions']
+    except KeyError:
+        mentorNoExaplanationHistory = None
+    try:
+        pathToReachMentor = contact_by_id['properties']['path_to_reach_mentor_role']['value']
+    except KeyError:
+        pathToReachMentor = None
+    try:
+        pathToReachMentorHistory = contact_by_id['properties']['path_to_reach_mentor_role']['versions']
+    except KeyError:
+        pathToReachMentorHistory = None
+    try:
+        immersiveParticipant = contact_by_id['properties']['immersive_participant']['value']
+    except KeyError:
+        immersiveParticipant = None
+    try:
+        immersiveParticipantHistory = contact_by_id['properties']['immersive_participant']['versions']
+    except KeyError:
+        immersiveParticipantHistory = None
+    try:
+        keyIssueDate = contact_by_id['properties']['key_issue_date']['value']
+    except KeyError:
+        keyIssueDate = None
+    try:
+        keyIssueDateHistory = contact_by_id['properties']['key_issue_date']['versions']
+    except KeyError:
+        keyIssueDateHistory = None
+    try:
+        keyReturnDate = contact_by_id['properties']['key_return_date']['value']
+    except KeyError:
+        keyReturnDate = None
+    try:
+        keyReturnDateHistory = contact_by_id['properties']['key_return_date']['versions']
+    except KeyError:
+        keyReturnDateHistory = None
+    try:
+        lastTCEmailUseDate = contact_by_id['properties']['last_tc_email_use_date']['value']
+    except KeyError:
+        lastTCEmailUseDate = None
+    try:
+        lastTCEmailUseDateHistory = contact_by_id['properties']['last_tc_email_use_date']['versions']
+    except KeyError:
+        lastTCEmailUseDateHistory = None
+    try:
+        linkGoalTracker = contact_by_id['properties']['link_to_goal_tracker']['value']
+    except KeyError:
+        linkGoalTracker = None
+    try:
+        linkGoalTrackerHistory = contact_by_id['properties']['link_to_goal_tracker']['versions']
+    except KeyError:
+        linkGoalTrackerHistory = None
+    try:
+        linkJobTracker = contact_by_id['properties']['link_to_job_tracker']['value']
+    except KeyError:
+        linkJobTracker = None
+    try:
+        linkJobTrackerHistory = contact_by_id['properties']['link_to_job_tracker']['versions']
+    except KeyError:
+        linkJobTrackerHistory = None
+    try:
+        madeTCReferral = contact_by_id['properties']['made_tc_referral']['value']
+    except KeyError:
+        madeTCReferral = None
+    try:
+        madeTCReferralHistory = contact_by_id['properties']['made_tc_referral']['versions']
+    except KeyError:
+        madeTCReferralHistory = None
+    try:
+        lastMentorBroughtName = contact_by_id['properties']['last_mentor_brought_name']['value']
+    except KeyError:
+        lastMentorBroughtName = None
+    try:
+        lastMentorBroughtNameHistory = contact_by_id['properties']['last_mentor_brought_name']['versions']
+    except KeyError:
+        lastMentorBroughtNameHistory = None
+    try:
+        lastMentorBroughtLinkedIn = contact_by_id['properties']['last_mentor_brought_linkedin']['value']
+    except KeyError:
+        lastMentorBroughtLinkedIn = None
+    try:
+        lastMentorBroughtLinkedInHistory = contact_by_id['properties']['last_mentor_brought_linkedin']['versions']
+    except KeyError:
+        lastMentorBroughtLinkedInHistory = None
+    try:
+        mentoredAtTC = contact_by_id['properties']['mentored_at_tc']['value']
+    except KeyError:
+        mentoredAtTC = None
+    try:
+        mentoredAtTCHistory = contact_by_id['properties']['mentored_at_tc']['versions']
+    except KeyError:
+        mentoredAtTCHistory = None
+    try:
+        mentorsBroughtIn = contact_by_id['properties']['mentors_brought_in']['value']
+    except KeyError:
+        mentorsBroughtIn = None
+    try:
+        mentorsBroughtInHistory = contact_by_id['properties']['mentors_brought_in']['versions']
+    except KeyError:
+        mentorsBroughtInHistory = None
+    try:
+        promoHelp = contact_by_id['properties']['wom_help']['value']
+    except KeyError:
+        promoHelp = None
+    try:
+        promoHelpHistory = contact_by_id['properties']['wom_help']['versions']
+    except KeyError:
+        promoHelpHistory = None
+    try:
+        promoNotes = contact_by_id['properties']['wom_notes']['value']
+    except KeyError:
+        promoNotes = None
+    try:
+        promoNotesHistory = contact_by_id['properties']['wom_notes']['versions']
+    except KeyError:
+        promoNotesHistory = None
+    try:
+        secondEmail = contact_by_id['properties']['second_email']['value']
+    except KeyError:
+        secondEmail = None
+    try:
+        secondEmailHistory = contact_by_id['properties']['second_email']['versions']
+    except KeyError:
+        secondEmailHistory = None
+    try:
+        sheetsTransferNotes = contact_by_id['properties']['sheets_transfer_notes']['value']
+    except KeyError:
+        sheetsTransferNotes = None
+    try:
+        sheetsTransferNotesHistory = contact_by_id['properties']['sheets_transfer_notes']['versions']
+    except KeyError:
+        sheetsTransferNotesHistory = None
+    try:
+        storyVideoLink = contact_by_id['properties']['story_video_link']['value']
+    except KeyError:
+        storyVideoLink = None
+    try:
+        storyVideoLinkHistory = contact_by_id['properties']['story_video_link']['versions']
+    except KeyError:
+        storyVideoLinkHistory = None
+    try:
+        membersReferred = contact_by_id['properties']['tc_members_referred']['value']
+    except KeyError:
+        membersReferred = None
+    try:
+        membersReferredHistory = contact_by_id['properties']['tc_members_referred']['versions']
+    except KeyError:
+        membersReferredHistory = None
+    try:
+        bankingInfo = contact_by_id['properties']['banking_information']['value']
+    except KeyError:
+        bankingInfo = None
+    try:
+        bankingInfoHistory = contact_by_id['properties']['banking_information']['versions']
+    except KeyError:
+        bankingInfoHistory = None
+    try:
+        burnRate = contact_by_id['properties']['burn_rate']['value']
+    except KeyError:
+        burnRate = None
+    try:
+        burnRateHistory = contact_by_id['properties']['burn_rate']['versions']
+    except KeyError:
+        burnRateHistory = None
+    try:
+        depositCollected = contact_by_id['properties']['deposit_collected']['value']
+    except KeyError:
+        depositCollected = None
+    try:
+        depositCollectedHistory = contact_by_id['properties']['deposit_collected']['versions']
+    except KeyError:
+        depositCollectedHistory = None
+    try:
+        depositUncollected = contact_by_id['properties']['deposit_uncollected']['value']
+    except KeyError:
+        depositUncollected = None
+    try:
+        depositUncollectedHistory = contact_by_id['properties']['deposit_uncollected']['versions']
+    except KeyError:
+        depositUncollectedHistory = None
+    try:
+        financialSituation = contact_by_id['properties']['financial_situation']['value']
+    except KeyError:
+        financialSituation = None
+    try:
+        financialSituationHistory = contact_by_id['properties']['financial_situation']['versions']
+    except KeyError:
+        financialSituationHistory = None
+    try:
+        financing = contact_by_id['properties']['financing']['value']
+    except KeyError:
+        financing = None
+    try:
+        financingHistory = contact_by_id['properties']['financing']['versions']
+    except KeyError:
+        financingHistory = None
+    try:
+        financingType = contact_by_id['properties']['financing_type']['value']
+    except KeyError:
+        financingType = None
+    try:
+        financingTypeHistory = contact_by_id['properties']['financing_type']['versions']
+    except KeyError:
+        financingTypeHistory = None
+    try:
+        holdBackAmount = contact_by_id['properties']['holdback_amount']['value']
+    except KeyError:
+        holdBackAmount = None
+    try:
+        holdBackAmountHistory = contact_by_id['properties']['holdback_amount']['versions']
+    except KeyError:
+        holdBackAmountHistory = None
+    try:
+        holdBackRepaymentDate = contact_by_id['properties']['holdback_repayment_date']['value']
+    except KeyError:
+        holdBackRepaymentDate = None
+    try:
+        holdBackRepaymentDateHistory = contact_by_id['properties']['holdback_repayment_date']['versions']
+    except KeyError:
+        holdBackRepaymentDateHistory = None
+    try:
+        paymentNotes = contact_by_id['properties']['payment_notes']['value']
+    except KeyError:
+        paymentNotes = None
+    try:
+        paymentNotesHistory = contact_by_id['properties']['payment_notes']['versions']
+    except KeyError:
+        paymentNotesHistory = None
+    try:
+        tuitionCollected = contact_by_id['properties']['tuition_collected']['value']
+    except KeyError:
+        tuitionCollected = None
+    try:
+        tuitionCollectedHistory = contact_by_id['properties']['tuition_collected']['versions']
+    except KeyError:
+        tuitionCollectedHistory = None
+    try:
+        tuitionUncollected = contact_by_id['properties']['tuition_uncollected']['value']
+    except KeyError:
+        tuitionUncollected = None
+    try:
+        tuitionUncollectedHistory = contact_by_id['properties']['tuition_uncollected']['versions']
+    except KeyError:
+        tuitionUncollectedHistory = None
+    try:
+        venmoInfo = contact_by_id['properties']['venmo_account_info']['value']
+    except KeyError:
+        venmoInfo = None
+    try:
+        venmoInfoHistory = contact_by_id['properties']['venmo_account_info']['versions']
+    except KeyError:
+        venmoInfoHistory = None
+    try:
+        writeOffAmount = contact_by_id['properties']['write_off_amount']['value']
+    except KeyError:
+        writeOffAmount = None
+    try:
+        writeOffAmountHistory = contact_by_id['properties']['write_off_amount']['versions']
+    except KeyError:
+        writeOffAmountHistory = None
+    try:
+        alcoholDrinkFrequency = contact_by_id['properties']['alcoholic_drink_frequency']['value']
+    except KeyError:
+        alcoholDrinkFrequency = None
+    try:
+        alcoholDrinkFrequencyHistory = contact_by_id['properties']['alcoholic_drink_frequency']['versions']
+    except KeyError:
+        alcoholDrinkFrequencyHistory = None
+    try:
+        alcoholDrinkPreference = contact_by_id['properties']['alcoholic_drink_preferences']['value']
+    except KeyError:
+        alcoholDrinkPreference = None
+    try:
+        alcoholDrinkPreferenceHistory = contact_by_id['properties']['alcoholic_drink_preferences']['versions']
+    except KeyError:
+        alcoholDrinkPreferenceHistory = None
+    try:
+        allergies = contact_by_id['properties']['allergies']['value']
+    except KeyError:
+        allergies = None
+    try:
+        allergiesHistory = contact_by_id['properties']['allergies']['versions']
+    except KeyError:
+        allergiesHistory = None
+    try:
+        dietaryRestrictions = contact_by_id['properties']['dietary_restrictions']['value']
+    except KeyError:
+        dietaryRestrictions = None
+    try:
+        dietaryRestrictionsHistory = contact_by_id['properties']['dietary_restrictions']['versions']
+    except KeyError:
+        dietaryRestrictionsHistory = None
+    try:
+        fears = contact_by_id['properties']['fears']['value']
+    except KeyError:
+        fears = None
+    try:
+        fearsHistory = contact_by_id['properties']['fears']['versions']
+    except KeyError:
+        fearsHistory = None
+    try:
+        insuranceCompany = contact_by_id['properties']['insurance_company']['value']
+    except KeyError:
+        insuranceCompany = None
+    try:
+        insuranceCompanyHistory = contact_by_id['properties']['insurance_company']['versions']
+    except KeyError:
+        insuranceCompanyHistory = None
+    try:
+        chronicConditions = contact_by_id['properties']['chronic_conditions']['value']
+    except KeyError:
+        chronicConditions = None
+    try:
+        chronicConditionsHistory = contact_by_id['properties']['chronic_conditions']['versions']
+    except KeyError:
+        chronicConditionsHistory = None
+    try:
+        medications = contact_by_id['properties']['medications']['value']
+    except KeyError:
+        medications = None
+    try:
+        medicationsHistory = contact_by_id['properties']['medications']['versions']
+    except KeyError:
+        medicationsHistory = None
+    try:
+        recentInjuries = contact_by_id['properties']['recent_injuries']['value']
+    except KeyError:
+        recentInjuries = None
+    try:
+        recentInjuriesHistory = contact_by_id['properties']['recent_injuries']['versions']
+    except KeyError:
+        recentInjuriesHistory = None
+    try:
+        stressFactors = contact_by_id['properties']['stress_factors']['value']
+    except KeyError:
+        stressFactors = None
+    try:
+        stressFactorsHistory = contact_by_id['properties']['stress_factors']['versions']
+    except KeyError:
+        stressFactorsHistory = None
+    try:
+        currentlyOnContracts = contact_by_id['properties']['currently_on_contract']['value']
+    except KeyError:
+        currentlyOnContracts = None
+    try:
+        currentlyOnContractsHistory = contact_by_id['properties']['currently_on_contract']['versions']
+    except KeyError:
+        currentlyOnContractsHistory = None
+    try:
+        currentContractCompany = contact_by_id['properties']['current_contract_company']['value']
+    except KeyError:
+        currentContractCompany = None
+    try:
+        currentContractCompanyHistory = contact_by_id['properties']['current_contract_company']['versions']
+    except KeyError:
+        currentContractCompanyHistory = None
+    try:
+        currentManager = contact_by_id['properties']['current_manager']['value']
+    except KeyError:
+        currentManager = None
+    try:
+        currentManagerHistory = contact_by_id['properties']['current_manager']['versions']
+    except KeyError:
+        currentManagerHistory = None
+    try:
+        employmentStatus = contact_by_id['properties']['employment_status']['value']
+    except KeyError:
+        employmentStatus = None
+    try:
+        employmentStatusHistory = contact_by_id['properties']['employment_status']['versions']
+    except KeyError:
+        employmentStatusHistory = None
+    try:
+        functionalSpecialties = contact_by_id['properties']['functional_specialties']['value']
+    except KeyError:
+        functionalSpecialties = None
+    try:
+        functionalSpecialtiesHistory = contact_by_id['properties']['functional_specialties']['versions']
+    except KeyError:
+        functionalSpecialtiesHistory = None
+    try:
+        industryFocus = contact_by_id['properties']['industry_focus']['value']
+    except KeyError:
+        industryFocus = None
+    try:
+        industryFocusHistory = contact_by_id['properties']['industry_focus']['versions']
+    except KeyError:
+        industryFocusHistory = None
+    try:
+        nextPerformanceReview = contact_by_id['properties']['next_performance_review']['value']
+    except KeyError:
+        nextPerformanceReview = None
+    try:
+        nextPerformanceReviewHistory = contact_by_id['properties']['next_performance_review']['versions']
+    except KeyError:
+        nextPerformanceReviewHistory = None
+    try:
+        notablePreTCCompanies = contact_by_id['properties']['notable_pre_tc_companies']['value']
+    except KeyError:
+        notablePreTCCompanies = None
+    try:
+        notablePreTCCompaniesHistory = contact_by_id['properties']['notable_pre_tc_companies']['versions']
+    except KeyError:
+        notablePreTCCompaniesHistory = None
+
+
 
     # OG PROPERTIES
 
@@ -2016,7 +2474,7 @@ for i in ids:
     except KeyError:
         are_you_open_to_new_roles_History = None
 
-    with open('data/{}.json'.format(i), 'w') as f:#TODO: Try is not None
+    with open('data/{}.json'.format(i), 'w') as f:
         data = {
             "hubspot_id": "{}".format(i),
             "email": {"value": email, "history": emailHistory},
