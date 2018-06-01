@@ -2162,10 +2162,6 @@ for i in ids:
     except KeyError:
         emailHistory = None
     try:
-        compensationOptions = contact_by_id['properties']['offer_letter_compensation_options']['value']
-    except KeyError:
-        compensationOptions = None
-    try:
         firstname = contact_by_id['properties']['firstname']['value']
     except KeyError:
         firstname = None
@@ -2473,6 +2469,512 @@ for i in ids:
             'properties']['are_you_open_to_new_roles_']['versions']
     except KeyError:
         are_you_open_to_new_roles_History = None
+    try:
+        job1CompanyName = contact_by_id['properties']['job_1_company_name']['value']
+    except KeyError:
+        job1CompanyName = None
+    try:
+        job1CompanyNameHistory = contact_by_id['properties']['job_1_company_name']['versions']
+    except KeyError:
+        job1CompanyNameHistory = None
+    try:
+        job1EndDate = contact_by_id['properties']['job_1_end_date']['value']
+    except KeyError:
+        job1EndDate = None
+    try:
+        job1EndDateHistory = contact_by_id['properties']['job_1_end_date']['versions']
+    except KeyError:
+        job1EndDateHistory = None
+    try:
+        job1Equity = contact_by_id['properties']['equity']['value']
+    except KeyError:
+        job1Equity = None
+    try:
+        job1EquityHistory = contact_by_id['properties']['equity']['versions']
+    except KeyError:
+        job1EquityHistory = None
+    try:
+        job1OfficeAdress = contact_by_id['properties']['office_address_location']['value']
+    except KeyError:
+        job1OfficeAdress = None
+    try:
+        job1OfficeAdressHistory = contact_by_id['properties']['office_address_location']['versions']
+    except KeyError:
+        job1OfficeAdressHistory = None
+    try:
+        job1Compensation = contact_by_id['properties']['other_compensation']['value']
+    except KeyError:
+        job1Compensation = None
+    try:
+        job1CompensationHistory = contact_by_id['properties']['other_compensation']['versions']
+    except KeyError:
+        job1CompensationHistory = None
+    try:
+        job1PerformanceReview1 = contact_by_id['properties']['job_1_performance_review_1']['value']
+    except KeyError:
+        job1PerformanceReview1 = None
+    try:
+        job1PerformanceReview1History = contact_by_id['properties']['job_1_performance_review_1']['versions']
+    except KeyError:
+        job1PerformanceReview1History = None
+    try:
+        job1PerformanceReview2 = contact_by_id['properties']['job_1_performance_review_2']['value']
+    except KeyError:
+        job1PerformanceReview2 = None
+    try:
+        job1PerformanceReview2History = contact_by_id['properties']['job_1_performance_review_2']['versions']
+    except KeyError:
+        job1PerformanceReview2History = None
+    try:
+        job1PerformanceReview3 = contact_by_id['properties']['job_1_performance_review_3']['value']
+    except KeyError:
+        job1PerformanceReview3 = None
+    try:
+        job1PerformanceReview3History = contact_by_id['properties']['job_1_performance_review_3']['versions']
+    except KeyError:
+        job1PerformanceReview3History = None
+    try:
+        job1PerformanceReview4 = contact_by_id['properties']['job_1_performance_review_4']['value']
+    except KeyError:
+        job1PerformanceReview4 = None
+    try:
+        job1PerformanceReview4History = contact_by_id['properties']['job_1_performance_review_4']['versions']
+    except KeyError:
+        job1PerformanceReview4History = None
+    try:
+        job1PerformanceReview5 = contact_by_id['properties']['job_1_performance_review_5']['value']
+    except KeyError:
+        job1PerformanceReview5 = None
+    try:
+        job1PerformanceReview5History = contact_by_id['properties']['job_1_performance_review_5']['versions']
+    except KeyError:
+        job1PerformanceReview5History = None
+    try:
+        job1PerformanceReview6 = contact_by_id['properties']['job_1_performance_review_6']['value']
+    except KeyError:
+        job1PerformanceReview6 = None
+    try:
+        job1PerformanceReview6History = contact_by_id['properties']['job_1_performance_review_6']['versions']
+    except KeyError:
+        job1PerformanceReview6History = None
+    try:
+        job1PerformanceReview7 = contact_by_id['properties']['job_1_performance_review_7']['value']
+    except KeyError:
+        job1PerformanceReview7 = None
+    try:
+        job1PerformanceReview7History = contact_by_id['properties']['job_1_performance_review_7']['versions']
+    except KeyError:
+        job1PerformanceReview7History = None
+    try:
+        job1PerformanceReview8 = contact_by_id['properties']['job_1_performance_review_8']['value']
+    except KeyError:
+        job1PerformanceReview8 = None
+    try:
+        job1PerformanceReview8History = contact_by_id['properties']['job_1_performance_review_8']['versions']
+    except KeyError:
+        job1PerformanceReview8History = None
+    try:
+        job1Salary = contact_by_id['properties']['salary']['value']
+    except KeyError:
+        job1Salary = None
+    try:
+        job1SalaryHistory = contact_by_id['properties']['salary']['versions']
+    except KeyError:
+        job1SalaryHistory = None
+    try:
+        job1StartDate = contact_by_id['properties']['start_date']['value']
+    except KeyError:
+        job1StartDate = None
+    try:
+        job1StartDateHistory = contact_by_id['properties']['start_date']['versions']
+    except KeyError:
+        job1StartDateHistory = None
+    try:
+        job1Title = contact_by_id['properties']['job_1_title']['value']
+    except KeyError:
+        job1Title = None
+    try:
+        job1TitleHistory = contact_by_id['properties']['job_1_title']['versions']
+    except KeyError:
+        job1TitleHistory = None
+    try:
+        job2CompanyName = contact_by_id['properties']['job_2_company_name']['value']
+    except KeyError:
+        job2CompanyName = None
+    try:
+        job2CompanyNameHistory = contact_by_id['properties']['job_2_company_name']['versions']
+    except KeyError:
+        job2CompanyNameHistory = None
+    try:
+        job2EndDate = contact_by_id['properties']['job_2_end_date']['value']
+    except KeyError:
+        job2EndDate = None
+    try:
+        job2EndDateHistory = contact_by_id['properties']['job_2_end_date']['versions']
+    except KeyError:
+        job2EndDateHistory = None
+    try:
+        job2Equity = contact_by_id['properties']['job_2_equity']['value']
+    except KeyError:
+        job2Equity = None
+    try:
+        job2EquityHistory = contact_by_id['properties']['job_2_equity']['versions']
+    except KeyError:
+        job2EquityHistory = None
+    try:
+        job2Location = contact_by_id['properties']['job_2_location']['value']
+    except KeyError:
+        job2Location = None
+    try:
+        job2LocationHistory = contact_by_id['properties']['job_2_location']['versions']
+    except KeyError:
+        job2LocationHistory = None
+    try:
+        job2Compensation = contact_by_id['properties']['job_2_other_compensation']['value']
+    except KeyError:
+        job2Compensation = None
+    try:
+        job2CompensationHistory = contact_by_id['properties']['job_2_other_compensation']['versions']
+    except KeyError:
+        job2CompensationHistory = None
+    try:
+        job2PerformanceReview1 = contact_by_id['properties']['job_2_performance_review_1']['value']
+    except KeyError:
+        job2PerformanceReview1 = None
+    try:
+        job2PerformanceReview1History = contact_by_id['properties']['job_2_performance_review_1']['versions']
+    except KeyError:
+        job2PerformanceReview1History = None
+    try:
+        job2PerformanceReview2 = contact_by_id['properties']['job_2_performance_review_2']['value']
+    except KeyError:
+        job2PerformanceReview2 = None
+    try:
+        job2PerformanceReview2History = contact_by_id['properties']['job_2_performance_review_2']['versions']
+    except KeyError:
+        job2PerformanceReview2History = None
+    try:
+        job2PerformanceReview3 = contact_by_id['properties']['job_2_performance_review_3']['value']
+    except KeyError:
+        job2PerformanceReview3 = None
+    try:
+        job2PerformanceReview3History = contact_by_id['properties']['job_2_performance_review_3']['versions']
+    except KeyError:
+        job2PerformanceReview3History = None
+    try:
+        job2PerformanceReview4 = contact_by_id['properties']['job_3_performance_review_4']['value']
+    except KeyError:
+        job2PerformanceReview4 = None
+    try:
+        job2PerformanceReview4History = contact_by_id['properties']['job_3_performance_review_4']['versions']
+    except KeyError:
+        job2PerformanceReview4History = None
+    try:
+        job2PerformanceReview5 = contact_by_id['properties']['job_2_performance_review_5']['value']
+    except KeyError:
+        job2PerformanceReview5 = None
+    try:
+        job2PerformanceReview5History = contact_by_id['properties']['job_2_performance_review_5']['versions']
+    except KeyError:
+        job2PerformanceReview5History = None
+    try:
+        job2PerformanceReview6 = contact_by_id['properties']['job_2_performance_review_6']['value']
+    except KeyError:
+        job2PerformanceReview6 = None
+    try:
+        job2PerformanceReview6History = contact_by_id['properties']['job_2_performance_review_6']['versions']
+    except KeyError:
+        job2PerformanceReview6History = None
+    try:
+        job2PerformanceReview7 = contact_by_id['properties']['job_2_performance_review_7']['value']
+    except KeyError:
+        job2PerformanceReview7 = None
+    try:
+        job2PerformanceReview7History = contact_by_id['properties']['job_2_performance_review_7']['versions']
+    except KeyError:
+        job2PerformanceReview7History = None
+    try:
+        job2PerformanceReview8 = contact_by_id['properties']['job_2_performance_review_8']['value']
+    except KeyError:
+        job2PerformanceReview8 = None
+    try:
+        job2PerformanceReview8History = contact_by_id['properties']['job_2_performance_review_8']['versions']
+    except KeyError:
+        job2PerformanceReview8History = None
+    try:
+        job2Salary = contact_by_id['properties']['job_2_salary']['value']
+    except KeyError:
+        job2Salary = None
+    try:
+        job2SalaryHistory = contact_by_id['properties']['job_2_salary']['versions']
+    except KeyError:
+        job2SalaryHistory = None
+    try:
+        job2StartDate = contact_by_id['properties']['job_2_start_date']['value']
+    except KeyError:
+        job2StartDate = None
+    try:
+        job2StartDateHistory = contact_by_id['properties']['job_2_start_date']['versions']
+    except KeyError:
+        job2StartDateHistory = None
+    try:
+        job2Title = contact_by_id['properties']['job_2_title']['value']
+    except KeyError:
+        job2Title = None
+    try:
+        job2TitleHistory = contact_by_id['properties']['job_2_title']['versions']
+    except KeyError:
+        job2TitleHistory = None
+    try:
+        job3CompanyName = contact_by_id['properties']['job_3_company_name']['value']
+    except KeyError:
+        job3CompanyName = None
+    try:
+        job3CompanyNameHistory = contact_by_id['properties']['job_3_company_name']['versions']
+    except KeyError:
+        job3CompanyNameHistory = None
+    try:
+        job3EndDate = contact_by_id['properties']['job_3_end_date']['value']
+    except KeyError:
+        job3EndDate = None
+    try:
+        job3EndDateHistory = contact_by_id['properties']['job_3_end_date']['versions']
+    except KeyError:
+        job3EndDateHistory = None
+    try:
+        job3Equity = contact_by_id['properties']['job_3_equity']['value']
+    except KeyError:
+        job3Equity = None
+    try:
+        job3EquityHistory = contact_by_id['properties']['job_3_equity']['versions']
+    except KeyError:
+        job3EquityHistory = None
+    try:
+        job3Location = contact_by_id['properties']['job_3_location']['value']
+    except KeyError:
+        job3Location = None
+    try:
+        job3LocationHistory = contact_by_id['properties']['job_3_location']['versions']
+    except KeyError:
+        job3LocationHistory = None
+    try:
+        job3Compensation = contact_by_id['properties']['job_3_other_compensation']['value']
+    except KeyError:
+        job3Compensation = None
+    try:
+        job3CompensationHistory = contact_by_id['properties']['job_3_other_compensation']['versions']
+    except KeyError:
+        job3CompensationHistory = None
+    try:
+        job3PerformanceReview1 = contact_by_id['properties']['job_3_performance_review_1']['value']
+    except KeyError:
+        job3PerformanceReview1 = None
+    try:
+        job3PerformanceReview1History = contact_by_id['properties']['job_3_performance_review_1']['versions']
+    except KeyError:
+        job3PerformanceReview1History = None
+    try:
+        job3PerformanceReview2 = contact_by_id['properties']['job_3_performance_review_2']['value']
+    except KeyError:
+        job3PerformanceReview2 = None
+    try:
+        job3PerformanceReview2History = contact_by_id['properties']['job_3_performance_review_2']['versions']
+    except KeyError:
+        job3PerformanceReview2History = None
+    try:
+        job3PerformanceReview3 = contact_by_id['properties']['job_3_performance_review_3']['value']
+    except KeyError:
+        job3PerformanceReview3 = None
+    try:
+        job3PerformanceReview3History = contact_by_id['properties']['job_3_performance_review_3']['versions']
+    except KeyError:
+        job3PerformanceReview3History = None
+    try:
+        job3PerformanceReview4 = contact_by_id['properties']['job_3_performance_review_4']['value']
+    except KeyError:
+        job3PerformanceReview4 = None
+    try:
+        job3PerformanceReview4History = contact_by_id['properties']['job_3_performance_review_4']['versions']
+    except KeyError:
+        job3PerformanceReview4History = None
+    try:
+        job3PerformanceReview5 = contact_by_id['properties']['job_3_performance_review_5']['value']
+    except KeyError:
+        job3PerformanceReview5 = None
+    try:
+        job3PerformanceReview5History = contact_by_id['properties']['job_3_performance_review_5']['versions']
+    except KeyError:
+        job3PerformanceReview5History = None
+    try:
+        job3PerformanceReview6 = contact_by_id['properties']['job_3_performance_review_6']['value']
+    except KeyError:
+        job3PerformanceReview6 = None
+    try:
+        job3PerformanceReview6History = contact_by_id['properties']['job_3_performance_review_6']['versions']
+    except KeyError:
+        job3PerformanceReview6History = None
+    try:
+        job3PerformanceReview7 = contact_by_id['properties']['job_3_performance_review_7']['value']
+    except KeyError:
+        job3PerformanceReview7 = None
+    try:
+        job3PerformanceReview7History = contact_by_id['properties']['job_3_performance_review_7']['versions']
+    except KeyError:
+        job3PerformanceReview7History = None
+    try:
+        job3PerformanceReview8 = contact_by_id['properties']['job_3_performance_review_8']['value']
+    except KeyError:
+        job3PerformanceReview8 = None
+    try:
+        job3PerformanceReview8History = contact_by_id['properties']['job_3_performance_review_8']['versions']
+    except KeyError:
+        job3PerformanceReview8History = None
+    try:
+        job3Salary = contact_by_id['properties']['job_3_salary']['value']
+    except KeyError:
+        job3Salary = None
+    try:
+        job3SalaryHistory = contact_by_id['properties']['job_3_salary']['versions']
+    except KeyError:
+        job3SalaryHistory = None
+    try:
+        job3StartDate = contact_by_id['properties']['job_3_start_date']['value']
+    except KeyError:
+        job3StartDate = None
+    try:
+        job3StartDateHistory = contact_by_id['properties']['job_3_start_date']['versions']
+    except KeyError:
+        job3StartDateHistory = None
+    try:
+        job3Title = contact_by_id['properties']['job_3_title']['value']
+    except KeyError:
+        job3Title = None
+    try:
+        job3TitleHistory = contact_by_id['properties']['job_3_title']['versions']
+    except KeyError:
+        job3TitleHistory = None
+    try:
+        pipelineCompany1Name = contact_by_id['properties']['pipeline_activity_company_1_name']['value']
+    except KeyError:
+        pipelineCompany1Name = None
+    try:
+        pipelineCompany1NameHistory = contact_by_id['properties']['pipeline_activity_company_1_name']['versions']
+    except KeyError:
+        pipelineCompany1NameHistory = None
+    try:
+        pipelineCompany1Status = contact_by_id['properties']['pipeline_activity_company_1_status']['value']
+    except KeyError:
+        pipelineCompany1Status = None
+    try:
+        pipelineCompany1StatusHistory = contact_by_id['properties']['pipeline_activity_company_1_status']['versions']
+    except KeyError:
+        pipelineCompany1StatusHistory = None
+    try:
+        pipelineCompany1Summary = contact_by_id['properties']['pipeline_activity_company_1_summary']['value']
+    except KeyError:
+        pipelineCompany1Summary = None
+    try:
+        pipelineCompany1SummaryHistory = contact_by_id['properties']['pipeline_activity_company_1_summary']['versions']
+    except KeyError:
+        pipelineCompany1SummaryHistory = None
+    try:
+        pipelineCompany2Name = contact_by_id['properties']['pipeline_activity_company_2_name']['value']
+    except KeyError:
+        pipelineCompany2Name = None
+    try:
+        pipelineCompany2NameHistory = contact_by_id['properties']['pipeline_activity_company_2_name']['versions']
+    except KeyError:
+        pipelineCompany2NameHistory = None
+    try:
+        pipelineCompany2Status = contact_by_id['properties']['pipeline_activity_company_2_status']['value']
+    except KeyError:
+        pipelineCompany2Status = None
+    try:
+        pipelineCompany2StatusHistory = contact_by_id['properties']['pipeline_activity_company_2_status']['versions']
+    except KeyError:
+        pipelineCompany2StatusHistory = None
+    try:
+        pipelineCompany2Summary = contact_by_id['properties']['pipeline_activity_company_2_summary']['value']
+    except KeyError:
+        pipelineCompany2Summary = None
+    try:
+        pipelineCompany2SummaryHistory = contact_by_id['properties']['pipeline_activity_company_2_summary']['versions']
+    except KeyError:
+        pipelineCompany2SummaryHistory = None
+    try:
+        pipelineCompany3Name = contact_by_id['properties']['pipeline_activity_company_3_name']['value']
+    except KeyError:
+        pipelineCompany3Name = None
+    try:
+        pipelineCompany3NameHistory = contact_by_id['properties']['pipeline_activity_company_3_name']['versions']
+    except KeyError:
+        pipelineCompany3NameHistory = None
+    try:
+        pipelineCompany3Status = contact_by_id['properties']['pipeline_activity_company_3_status']['value']
+    except KeyError:
+        pipelineCompany3Status = None
+    try:
+        pipelineCompany3StatusHistory = contact_by_id['properties']['pipeline_activity_company_3_status']['versions']
+    except KeyError:
+        pipelineCompany3StatusHistory = None
+    try:
+        pipelineCompany3Summary = contact_by_id['properties']['pipeline_activity_company_3_summary']['value']
+    except KeyError:
+        pipelineCompany3Summary = None
+    try:
+        pipelineCompany3SummaryHistory = contact_by_id['properties']['pipeline_activity_company_3_summary']['versions']
+    except KeyError:
+        pipelineCompany3SummaryHistory = None
+    try:
+        pipelineCompany4Name = contact_by_id['properties']['pipeline_activity_company_4_name']['value']
+    except KeyError:
+        pipelineCompany4Name = None
+    try:
+        pipelineCompany4NameHistory = contact_by_id['properties']['pipeline_activity_company_4_name']['versions']
+    except KeyError:
+        pipelineCompany4NameHistory = None
+    try:
+        pipelineCompany4Status = contact_by_id['properties']['pipeline_activity_company_4_status']['value']
+    except KeyError:
+        pipelineCompany4Status = None
+    try:
+        pipelineCompany4StatusHistory = contact_by_id['properties']['pipeline_activity_company_4_status']['versions']
+    except KeyError:
+        pipelineCompany4StatusHistory = None
+    try:
+        pipelineCompany4Summary = contact_by_id['properties']['pipeline_activity_company_4_summary']['value']
+    except KeyError:
+        pipelineCompany4Summary = None
+    try:
+        pipelineCompany4SummaryHistory = contact_by_id['properties']['pipeline_activity_company_4_summary']['versions']
+    except KeyError:
+        pipelineCompany4SummaryHistory = None
+    try:
+        pipelineCompany5Name = contact_by_id['properties']['pipeline_activity_company_5_name']['value']
+    except KeyError:
+        pipelineCompany5Name = None
+    try:
+        pipelineCompany5NameHistory = contact_by_id['properties']['pipeline_activity_company_5_name']['versions']
+    except KeyError:
+        pipelineCompany5NameHistory = None
+    try:
+        pipelineCompany5Status = contact_by_id['properties']['pipeline_activity_company_5_status']['value']
+    except KeyError:
+        pipelineCompany5Status = None
+    try:
+        pipelineCompany5StatusHistory = contact_by_id['properties']['pipeline_activity_company_5_status']['versions']
+    except KeyError:
+        pipelineCompany5StatusHistory = None
+    try:
+        pipelineCompany5Summary = contact_by_id['properties']['pipeline_activity_company_5_summary']['value']
+    except KeyError:
+        pipelineCompany5Summary = None
+    try:
+        pipelineCompany5SummaryHistory = contact_by_id['properties']['pipeline_activity_company_5_summary']['versions']
+    except KeyError:
+        pipelineCompany5SummaryHistory = None
+    
+
 
     with open('data/{}.json'.format(i), 'w') as f:
         data = {
