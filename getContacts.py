@@ -445,13 +445,13 @@ for i in ids:
     except KeyError:
         nameOfManagerHistory = None
     try:
-        numOfDIrectReports = contact_by_id['properties']['offer_letter_number_of_direct_reports']['value']
+        numOfDirectReports = contact_by_id['properties']['offer_letter_number_of_direct_reports']['value']
     except KeyError:
-        numOfDIrectReports = None
+        numOfDirectReports = None
     try:
-        numOfDIrectReportsHistory = contact_by_id['properties']['offer_letter_number_of_direct_reports']['versions']
+        numOfDirectReportsHistory = contact_by_id['properties']['offer_letter_number_of_direct_reports']['versions']
     except KeyError:
-        numOfDIrectReportsHistory = None
+        numOfDirectReportsHistory = None
     try:
         numOfEmployeesOfferLetter = contact_by_id['properties']['offer_letter_number_of_employees']['value']
     except KeyError:
@@ -933,13 +933,13 @@ for i in ids:
     except KeyError:
         managerTimeInRoleHistory = None
     try:
-        lastFundingRound = contact_by_id['properties']['offer_letter_date_of_last_funding_round']['value']
+        lastFundingRoundDate = contact_by_id['properties']['offer_letter_date_of_last_funding_round']['value']
     except KeyError:
-        lastFundingRound = None
+        lastFundingRoundDate = None
     try:
-        lastFundingRoundHistory = contact_by_id['properties']['offer_letter_date_of_last_funding_round']['versions']
+        lastFundingRoundDateHistory = contact_by_id['properties']['offer_letter_date_of_last_funding_round']['versions']
     except KeyError:
-        lastFundingRoundHistory = None
+        lastFundingRoundDateHistory = None
     try:
         offerGivenDate = contact_by_id['properties']['offer_letter_date_given_offer']['value']
     except KeyError:
@@ -2973,51 +2973,191 @@ for i in ids:
         pipelineCompany5SummaryHistory = contact_by_id['properties']['pipeline_activity_company_5_summary']['versions']
     except KeyError:
         pipelineCompany5SummaryHistory = None
+    try:
+        mentorRoleReachable3Years = contact_by_id['properties']['mentor_role_reachable_in_3years']['value']
+    except KeyError:
+        mentorRoleReachable3Years = None
+    try:
+        mentorRoleReachable3YearsHistory = contact_by_id['properties']['mentor_role_reachable_in_3years']['versions']
+    except KeyError:
+        mentorRoleReachable3YearsHistory = None
     
 
 
-    with open('data/{}.json'.format(i), 'w') as f:
+    with open('data/{}.json'.format(email), 'w') as f:
         data = {
             "hubspot_id": "{}".format(i),
-            "email": {"value": email, "history": emailHistory},
-            "firstname": {"value": firstname, "history": firstnameHistory},
-            "lastname": {"value": lastname, "history": lastnameHistory},
-            "lifecycle-stage": {"value": lifecyclestage, "history": lifecyclestageHistory},
-            "website": {"value": website, "history": websiteHistory},
-            "lead-source": {"value": lead_source, "history": lead_sourceHistory},
-            "job-title": {"value": jobtitle, "history": jobtitleHistory},
-            "company_name": {"value": company, "history": companyHistory},
-            "last-activity-date": {"value": notes_last_updated, "history": notes_last_updatedHistory},
-            "created-date": {"value": createdate, "history": createdateHistory},
-            "slack": {"value": slack_handle, "history": slack_handleHistory},
-            "github": {"value": github, "history": githubHistory},
-            "medium": {"value": medium, "history": mediumHistory},
-            "twitter": {"value": twitterhandle, "history": twitterhandleHistory},
-            "linkedin": {"value": linkedin, "history": linkedinHistory},
-            "last-page-seen": {"value": hs_analytics_last_url, "history": hs_analytics_last_urlHistory},
-            "num-forms-submitted": {"value": num_conversion_events, "history": num_conversion_eventsHistory},
-            "num-unique-forms-submitted": {"value": num_unique_conversion_events, "history": num_unique_conversion_eventsHistory},
-            "curriculum-grade": {"value": curriculum_grade, "history": curriculum_gradeHistory},
-            "curriculum-detailed": {"value": curriculum_detailed_feedback, "history": curriculum_detailed_feedbackHistory},
-            "project-grade": {"value": project_grade, "history": project_gradeHistory},
-            'project-detailed': {"value": project_detailed_feedback, "history": project_detailed_feedbackHistory},
-            "cardev-grade": {"value": career_development_grade, "history": career_development_gradeHistory},
-            "cardev-detailed": {"value": career_development_detailed_feedback, "history": career_development_detailed_feedbackHistory},
-            "general-grade": {"value": overall_grade, "history": overall_gradeHistory},
-            "general-detailed": {"value": general_detailed_feedback, "history": general_detailed_feedbackHistory},
-            "good-standing": {"value": good_standing, "history": good_standingHistory},
-            "cohort": {"value": tc_cohort, "history": tc_cohortHistory},
-            "tc-email": {"value": tc_email, "history": tc_emailHistory},
-            "tc-grad-date": {"value": tc_grad_date, "history": tc_grad_dateHistory},
-            "tc-projects": {"value": tc_projects, "history": tc_projectsHistory},
-            "tc-start-date": {"value": tc_start_date, "history": tc_start_dateHistory},
-            "track": {"value": tc_track, "history": tc_trackHistory},
-            "bio": {"value": n140_character_bio, "history": n140_character_bioHistory},
-            "mbti-type": {"value": mbti_types, "history": mbti_typesHistory},
-            "last-registered-event": {"value": hs_eventbrite_lastregisteredevent, "history": hs_eventbrite_lastregisteredeventHistory},
-            "last-registered-event-date": {"value": hs_eventbrite_lastregisteredeventdate, "history": hs_eventbrite_lastregisteredeventdateHistory},
-            "job-search-mentality": {"value": are_you_open_to_new_roles_, "history": are_you_open_to_new_roles_History},
-            "companies-reached": {"value": namesCompaniesReachedOut, "history": namesCompaniesReachedOutHistory},
+            "email": {"value": email, "versions": emailHistory},
+            "firstname": {"value": firstname, "versions": firstnameHistory},
+            "lastname": {"value": lastname, "versions": lastnameHistory},
+            "lifecycle_stage": {"value": lifecyclestage, "versions": lifecyclestageHistory},
+            "good_standing": {"value": good_standing, "versions": good_standingHistory},
+            "personal_info": {
+                "closest_friend_name": {"value": closestFriend, "versions": closestFriendHistory},
+                "closest_friend_number": {"value": closestFriendNumber, "versions": closestFriendNumberHistory},
+                "fax": {"value": fax, "versions": faxHistory},
+                "legal_name": {"value": legalName, "versions": legalNameHistory},
+                "grew_up_in": {"value": growUpLocation, "versions": growUpLocationHistory},
+                "weight": {"value": weight, "versions": weightHistory},
+                "siblings": {"value": siblings, "versions": siblingsHistory},
+                "religious_affiliations": {"value": religiousAffiliations, "versions": religiousAffiliationsHistory},
+                "preferred_name": {"value": preferredName, "versions": preferredNameHistory},
+                "notes_on_sibling": {"value": siblingNotes, "versions": siblingNotesHistory},
+                "notes_on_children": {"value": childrenNotes, "versions": childrenNotesHistory},
+                "significant_other_name": {"value": significantOtherName, "versions": significantOtherNameHistory},
+                "marital_status": {"value": maritalStatus, "versions": maritalStatusHistory},
+                "immigration_status": {"value": immigrationStatus, "versions": immigrationStatusHistory},
+                "hobbies": {"value": hobbies, "versions": hobbiesHistory},
+                "height": {"value": height, "versions": heightHistory},
+                "glasses": {"value": glasses, "versions": glassesHistory},
+                "gender": {"value": gender, "versions": genderHistory},
+                "gear_size": {"value": gearSize, "versions": gearSizeHistory},
+                "family_in_bay_area": {"value": familyInBayArea, "versions": familyInBayAreaHistory},
+                "ethnicity": {"value": ethnicity, "versions": ethnicityHistory},
+                "citizenship": {"value": citizenship, "versions": citizenshipHistory},
+                "children": {"value": children, "versions": childrenHistory},
+                "birthplace": {"value": birthplace, "versions": birthplaceHistory},
+                "birthday": {"value": birthday, "versions": birthdayHistory},
+                "additional_languages": {"value": languagesSpoken, "versions": languagesSpokenHistory},
+                "fears": {"value": fears, "versions": fearsHistory},
+                "insurance_company": {"value": insuranceCompany, "versions": insuranceCompanyHistory},
+                "chronic_conditions": {"value": chronicConditions, "versions": chronicConditionsHistory},
+                "medications": {"value": medications, "versions": medicationsHistory},
+                "recent_injuries": {"value": recentInjuries, "versions": recentInjuriesHistory},
+                "stress_factors": {"value": stressFactors, "versions": stressFactorsHistory},
+                "140_bio": {"value": n140_character_bio, "versions": n140_character_bioHistory},
+                "mbti": {"value": mbti_types, "versions": mbti_typesHistory}
+            },
+            "location": {
+                "bay_area_address": {"value": bayAreaAddress, "versions": bayAreaAddressHistory},
+                "city": {"value": city, "versions": cityHistory},
+                "country": {"value": country, "versions": countryHistory},
+                "current_location": {"value": currentLocation, "versions": currentLocationHistory},
+                "postal_code": {"value": postalCode, "versions": postalCodeHistory},
+                "state": {"value": state, "versions": stateHistory},
+                "address": {"value": address, "versions": addressHistory},
+                "office_address": {"value": officeAddress, "versions": officeAddressHistory},
+                "job_2": {"value": job2Location, "versions": job2LocationHistory},
+                "job_3": {"value": job3Location, "versions": job3LocationHistory}
+            },
+            "emergency_contact": {
+                "email": {"value": emergencyContactEmail, "versions": emergencyContactEmailHistory},
+                "location": {"value": emergencyContactLocation, "versions": emergencyContactLocationHistory},
+                "name": {"value": emergencyContactName, "versions": emergencyContactNameHistory},
+                "number": {"value": emergencyContactNumber, "versions": emergencyContactNumberHistory}
+            },
+            "contact_info": {
+                "mobilephone": {"value": mobilePhone, "versions": mobilePhoneHistory},
+                "permanent_address": {"value": permanentAddress, "versions": permanentAddressHistory},
+                "phone": {"value": phone, "versions": phoneHistory},
+                "family_location": {"value": familyLocation, "versions": familyLocationHistory},
+                "second_email": {"value": secondEmail, "versions": secondEmailHistory},
+                "tc_email": {"value": tc_email, "versions": tc_emailHistory},
+            },
+            "offer_letter": {
+                "compensation_options": {"value": compensationOptions, "versions": compensationOptionsHistory},
+                "manager_time": {"value": managerTimeAtCompany, "versions": managerTimeAtCompanyHistory},
+                "manager_name": {"value": nameOfManager, "versions": nameOfManagerHistory},
+                "direct_reports_num": {"value": numOfDirectReports, "versions": numOfDirectReportsHistory},
+                "employee_num": {"value": numOfEmployeesOfferLetter, "versions": numOfEmployeesOfferLetterHistory},
+                "payment_timing_3": {"value": paymentTiming3, "versions": paymentTiming3History},
+                "job_title": {"value": positionTitle, "versions": positionTitleHistory},
+                "recruiter": {"value": recruiterName, "versions": recruiterNameHistory},
+                "recruiter_company": {"value": recruiterCompany, "versions": recruiterCompanyHistory},
+                "shares_issued": {"value": totalSharesIssued, "versions": totalSharesIssuedHistory},
+                "post_money_valuation": {"value": postMoneyValuation, "versions": postMoneyValuationHistory},
+                "direct_reports": {"value": managersDirectReports, "versions": managersDirectReportsHistory},
+                "annualized_salary": {"value": annualizedSalary, "versions": annualizedSalaryHistory},
+                "amount_raised": {"value": amountRaisedLastRound, "versions": amountRaisedLastRoundHistory},
+                "round_type": {"value": roundType, "versions": roundTypeHistory},
+                "bonuses": {"value": bonuses, "versions": bonusesHistory},
+                "upload": {"value": offerLetterUpload, "versions": offerLetterUploadHistory},
+                "fully_vested": {"value": whenFullyVested, "versions": whenFullyVestedHistory},
+                "vesting_start_date": {"value": vestingStartDate, "versions": vestingStartDateHistory},
+                "engagement_type": {"value": typeOfEngagement, "versions": typeOfEngagementHistory},
+                "total_raised": {"value": totalAmountRaised, "versions": totalAmountRaisedHistory},
+                "stock_shares": {"value": sharesOfStock, "versions": sharesOfStockHistory},
+                "stock_shares2": {"value": sharesOfStock2, "versions": sharesOfStock2History},
+                "stock_shares3": {"value": sharesOfStock3, "versions": sharesOfStock3History},
+                "proposed_start_date": {"value": proposedStartDate, "versions": proposedStartDateHistory},
+                "proposed_salary3": {"value": proposedSalaryOption3, "versions": proposedSalaryOption3History},
+                "payment_timing": {"value": paymentTiming, "versions": paymentTimingHistory},
+                "parent_company": {"value": parentCompanyName, "versions": parentCompanyNameHistory},
+                "paid_time_off": {"value": paidTimeOff, "versions": paidTimeOffHistory},
+                "other_benefits": {"value": otherBenefits, "versions": otherBenefitsHistory},
+                "expiration_date": {"value": offerLetterExpirationDate, "versions": offerLetterExpirationDateHistory},
+                "manager_title": {"value": managerTitle, "versions": managerTitleHistory},
+                "manager_time_in_role": {"value": managerTimeInRole, "versions": managerTimeInRoleHistory},
+                "last_funding_date": {"value": lastFundingRoundDate, "versions": lastFundingRoundDateHistory},
+                "offer_given_date": {"value": offerGivenDate, "versions": offerGivenDateHistory},
+                "bonuses2": {"value": bonuses2, "versions": bonuses2History},
+                "bonuses3": {"value": bonuses3, "versions": bonuses3History},
+                "benefits": {"value": benefits, "versions": benefitsHistory},
+                "proposed_salary2": {"value": proposedSalaryOption2, "versions": proposedSalaryOption2History},
+                "payment_schedule": {"value": paymentSchedule2, "versions": paymentSchedule2History},
+                "company_name": {"value": offerLetterCompanyName, "versions": offerLetterCompanyNameHistory},
+                "placed_by_recruiter": {"value": workWithRecruiter, "versions": workWithRecruiterHistory}
+            },
+            "career_development": {
+                "priority_goals": {"value": priorityGoals, "versions": priorityGoalsHistory},
+                "num_companies_reached": {"value": numCompaniesReachedOut, "versions": numCompaniesReachedOutHistory},
+                "companies_reached": {"value": namesCompaniesReachedOut, "versions": namesCompaniesReachedOutHistory},
+                "job_search_stage": {"value": jobSearchStage, "versions": jobSearchStageHistory},
+                "feeling_this_week": {"value": feelLastWeek, "versions": feelLastWeekHistory},
+                "support_this_week": {"value": supportThisWeek, "versions": supportThisWeekHistory},
+                "interviewing_companies": {"value": currentlyInterviewing, "versions": currentlyInterviewingHistory},
+                "extra_info": {"value": extraInfo, "versions": extraInfoHistory},
+                "update_asset": {"value": carDevWeeklyUpdateAssets, "versions": carDevWeeklyUpdateAssetsHistory},
+                "on_contract": {"value": currentlyOnContracts, "versions": currentlyOnContractsHistory},
+                "current_contract_company": {"value": currentContractCompany, "versions": currentContractCompanyHistory},
+                "current_manager": {"value": currentManager, "versions": currentManagerHistory},
+                "pipeline_company1_name": {"value": pipelineCompany1Name, "versions": pipelineCompany1NameHistory},
+                "pipeline_company1_status": {"value": pipelineCompany1Status, "versions": pipelineCompany1StatusHistory},
+                "pipeline_company1_summary": {"value": pipelineCompany1Summary, "versions": pipelineCompany1SummaryHistory},
+                "pipeline_company2_name": {"value": pipelineCompany2Name, "versions": pipelineCompany2NameHistory},
+                "pipeline_company2_status": {"value": pipelineCompany2Status, "versions": pipelineCompany2StatusHistory},
+                "pipeline_company2_summary": {"value": pipelineCompany2Summary, "versions": pipelineCompany2SummaryHistory},
+                "pipeline_company3_name": {"value": pipelineCompany3Name, "versions": pipelineCompany3NameHistory},
+                "pipeline_company3_status": {"value": pipelineCompany3Status, "versions": pipelineCompany3StatusHistory},
+                "pipeline_company3_summary": {"value": pipelineCompany3Summary, "versions": pipelineCompany3SummaryHistory},
+                "pipeline_company4_name": {"value": pipelineCompany4Name, "versions": pipelineCompany4NameHistory},
+                "pipeline_company4_status": {"value": pipelineCompany4Status, "versions": pipelineCompany4StatusHistory},
+                "pipeline_company4_summary": {"value": pipelineCompany4Summary, "versions": pipelineCompany4SummaryHistory},
+                "pipeline_company5_name": {"value": pipelineCompany5Name, "versions": pipelineCompany5NameHistory},
+                "pipeline_company5_status": {"value": pipelineCompany5Status, "versions": pipelineCompany5StatusHistory},
+                "pipeline_company5_summary": {"value": pipelineCompany5Summary, "versions": pipelineCompany5SummaryHistory}
+            },
+            "career_info": {
+                "work_email": {"value": currentWorkEmail, "versions": currentWorkEmailHistory},
+                "employee_num": {"value": numOfEmployees, "versions": numOfEmployeesHistory},
+                "tool_expertise": {"value": toolExpertise, "versions": toolExpertiseHistory},
+                "sector_experience": {"value": sectorExperience, "versions": sectorExperienceHistory},
+                "past_profession": {"value": pastProfession, "versions": pastProfessionHistory},
+                "great_resume": {"value": greatResume, "versions": greatResumeHistory}
+            },
+            "program_info": {
+                "feedback": {
+
+                },
+            },
+            "mentor_talks": {
+
+            },
+            "financial_info": {
+
+            },
+            "events_info": {
+
+            },
+            "social_info": {
+
+            },
+            "hubspot": {
+
+            },
+            "tracking": {
+
+            }
         }
         json_data = json.dumps(data, default=set_default)
         print('data on file for {}'.format(i))
