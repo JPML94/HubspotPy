@@ -4,13 +4,11 @@
 
 - getContacts.py - gets all contacts, then for each gets properties specified and writes json file
 
-- parseJson.py - example parsing for json records
-
 ## How to run:
 
-- Create project directory and change directory:
+- Clone project and change directory:
 
-		$ mkdir HubspotPy
+		$ git clone https://github.com/JPML94/HubspotPy.git
 		$ cd HubspotPy
 
 - Create virtual environment:
@@ -28,7 +26,3 @@
 - Run getContacts.py:
 
 		$ python3 getContacts.py
-
-- Run parseJson.py:
-
-		$ python3 parseJson.py 
